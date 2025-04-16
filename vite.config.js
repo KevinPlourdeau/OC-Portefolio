@@ -4,6 +4,7 @@ import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
+  base: '/OC-Portefolio/',
   resolve: {
     alias: {
       '@pages': path.resolve(__dirname, './src/pages'),

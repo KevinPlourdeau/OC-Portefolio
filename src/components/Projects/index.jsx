@@ -49,7 +49,6 @@ function Projets() {
   return (
     <section className="projets" id="projets">
       <h2>Mes Projets</h2>
-
       <div className="projets__container">
         <div className="projets__info">
           <div className="projets__info__titles">
@@ -57,8 +56,12 @@ function Projets() {
             <h4>{projet["under-title"]}</h4>
           </div>
           <div className="projets__info--arrows">
-            <button onClick={handlePrevProject} className="arrow arrow-left"><FontAwesomeIcon icon={faArrowLeft} /></button>
-            <button onClick={handleNextProject} className="arrow arrow-right"><FontAwesomeIcon icon={faArrowRight} /></button>
+            <button onClick={handlePrevProject} className="arrow arrow-left">
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </button>
+            <button onClick={handleNextProject} className="arrow arrow-right">
+              <FontAwesomeIcon icon={faArrowRight} />
+            </button>
           </div>
           <div className="projets__info__description">
             <BoldTextJson
@@ -66,28 +69,36 @@ function Projets() {
               keywords={keywordsMap[projet["under-title"]] || []}
             />
             {projet.github && (
-              <a href={projet.github} target="_blank" rel="noopener noreferrer">Lien GitHub</a>
+              <a href={projet.github} target="_blank" rel="noopener noreferrer">
+                Lien GitHub
+              </a>
             )}
           </div>
         </div>
 
-        <div className="projets__gallery">
-          {images.length > 0 ? (
-            images.map((pic, index) => (
-              <div
-                key={index}
-                className="projets__gallery-item"
-                onClick={() => openModal(index)}
-              >
-                <img
-                  src={new URL(`/src/assets/projects/${pic}`, import.meta.url).href}
-                  alt={`Aperçu ${index + 1}`}
-                />
-              </div>
-            ))
-          ) : (
-            <div className="projets__gallery-placeholder">Aucune image</div>
-          )}
+        <div className="projets__right">
+          <div className="projets__hint">
+            <i className="fa-solid fa-magnifying-glass"></i>
+            <span>Cliquez sur les images du site pour l’agrandir</span>
+          </div>
+          <div className="projets__gallery">
+            {images.length > 0 ? (
+              images.map((pic, index) => (
+                <div
+                  key={index}
+                  className="projets__gallery-item"
+                  onClick={() => openModal(index)}
+                >
+                  <img
+                    src={new URL(`/src/assets/projects/${pic}`, import.meta.url).href}
+                    alt={`Aperçu ${index + 1}`}
+                  />
+                </div>
+              ))
+            ) : (
+              <div className="projets__gallery-placeholder">Aucune image</div>
+            )}
+          </div>
         </div>
       </div>
 
