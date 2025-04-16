@@ -1,0 +1,13 @@
+// Styles reset + utils
+@use '@styles/Base/base';
+@use '@styles/Utils/utils';
+
+// Styles pages
+@use '@styles/pages/Home/home';
+
+// Styles composants
+@use '@styles/components/Contact/contact';
+@use '@styles/components/Intro/intro';
+@use '@styles/components/Projects/projects';
+@use '@styles/components/Skills/skills';
+@use '@styles/components/Modale/modale';

@@ -1,0 +1,12 @@
+[
+  { "name": "React", "level": "Intermédiaire", "logo": "react.png" },
+  { "name": "Git", "level": "Base", "logo": "git.png" },
+  { "name": "JavaScript", "level": "Intermédiaire", "logo": "js.png" },
+  { "name": "HTML", "level": "Avancée", "logo": "html.png" },
+  { "name": "Sass", "level": "Intermédiaire", "logo": "sass.png" },
+  { "name": "Mongo", "level": "Base", "logo": "mongodb.png" },
+  { "name": "node.js\n/\nExpress", "level": "Base", "logo": "node.png" },
+  { "name": "CSS", "level": "Avancée", "logo": "css.png" }
+]
+
+  

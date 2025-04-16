@@ -1,0 +1,37 @@
+[
+	{
+		"title": "Projet 1:",
+        "under-title":"Booki",
+		"pictures": ["Booki1.png", "Booki2.png", "Booki3.png", "Booki4.png"],
+		"description":  "Ce projet est ma première mission de développeur web dans le cadre de ma formation. L’objectif était d’intégrer l’interface du site Booki, une plateforme permettant aux utilisateurs de rechercher des hébergements et des activités touristiques selon la ville choisie. À partir de maquettes fournies (versions desktop, tablette et mobile), j’ai réalisé l’intégration complète en HTML5 et CSS3. J’ai utilisé Flexbox pour la mise en page, et les media queries pour assurer une adaptation responsive sur tous les écrans. Ce projet m’a permis de renforcer mes bases en structuration HTML sémantique, de gérer l’accessibilité, et de prendre de bonnes habitudes de versionnage avec Git et GitHub.",
+		"github": "https://github.com/KevinPlourdeau/Projet2.git"
+	},
+	{
+		"title": "Projet 2:",
+        "under-title":"Portfolio - Sophie Bluel",
+		"pictures": ["Sophie1.png", "Sophie2.png", "Sophie3.png", "Sophie4.png", "Sophie5.png", "Sophie6.png", "Sophie7.png"],
+		"description":  "Ce projet consistait à développer le site portfolio d’une architecte d’intérieur à partir de maquettes Figma. J’ai implémenté la galerie en JavaScript, avec un affichage dynamique des projets récupérés depuis une API REST. J’ai également développé une page de connexion pour l’administrateur, avec gestion de token d’authentification, ainsi qu’une modale complète pour l’upload et la suppression d’images. Ce projet m’a permis de renforcer mes compétences en DOM, manipulation des formulaires, et en interaction avec une API sécurisée.",
+		"github": "https://github.com/KevinPlourdeau/Projet3.git"
+	},
+	{
+		"title": "Projet 3:",
+        "under-title":"Site - Nina Carducci",
+		"pictures": ["Nina1.png", "Nina2.png", "Nina3.png", "Nina4.png", "Nina5.png", "Nina6.png"],
+		"description": "Dans ce projet, j’ai proposé mes services de développeur freelance pour optimiser le site de la photographe Nina Carducci. J’ai réalisé un audit complet avec Lighthouse et GTMetrix, corrigé les bugs présents dans la modale et les filtres, puis optimisé les performances, le SEO et l’accessibilité du site. Les améliorations ont inclus la compression des images, l’optimisation du code HTML/CSS, l’ajout de données structurées Schema.org pour le référencement local, ainsi que des balises Open Graph et Twitter Cards. J’ai fourni un rapport détaillé d’intervention comparant les résultats avant/après sur tous les indicateurs clés de performance.",
+		"github": "https://github.com/KevinPlourdeau/Projet4.git"
+	},
+	{
+		"title": "Projet 4:",
+        "under-title":"Kasa",
+		"pictures": ["Kasa1.png", "Kasa2.png", "Kasa3.png", "Kasa4.png", "Kasa5.png"],
+		"description":  "Dans ce projet, j’ai développé l’entièreté du front-end de la plateforme de location d’appartements Kasa à l’aide de React et Vite. J’ai mis en place le routage avec React Router, conçu des composants dynamiques comme le carrousel (Slideshow) et les menus déroulants (Collapse), et géré les erreurs de navigation avec une page 404. Les données des logements sont intégrées depuis un fichier JSON, et les composants sont responsives selon les maquettes Figma. Le projet respecte les conventions de code et les guidelines techniques de l’entreprise, en intégrant Sass pour le style et des animations CSS fluides.",
+		"github": "https://github.com/KevinPlourdeau/Projet5.git"
+	},
+	{
+		"title": "Projet 5:",
+        "under-title":"Mon vieux Grimoire",
+		"pictures": ["VieuxGrimoire1.png", "VieuxGrimoire2.png", "VieuxGrimoire3.png", "VieuxGrimoire4.png", "VieuxGrimoire5.png", "VieuxGrimoire6.png"],
+		"description":  "Ce projet back-end réalisé pour le site Mon Vieux Grimoire m’a permis de développer une API REST complète à l’aide de Node.js, Express et MongoDB. L’application permet aux utilisateurs de s’inscrire, se connecter, ajouter un livre, le modifier, et surtout, de noter les ouvrages à l’aide d’un système de notation sécurisé. L’authentification est gérée avec des tokens JWT, les mots de passe sont cryptés avec Bcrypt, et les images uploadées sont compressées grâce à Sharp. Une attention particulière a été portée au respect des bonnes pratiques du Green Code, notamment en optimisant le poids des images. L’API respecte scrupuleusement les spécifications techniques fournies par le front-end, et les notations multiples par un même utilisateur sont bloquées, tout en recalculant dynamiquement la moyenne des notes de chaque livre.",
+		"github": "https://github.com/KevinPlourdeau/Projet6.git"
+	}
+]
