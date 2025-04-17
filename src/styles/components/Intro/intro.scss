@@ -3,7 +3,7 @@
 .intro {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 700px;
   overflow: hidden;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
 
@@ -20,11 +20,22 @@
     position: relative;
     width: 100%;
     height: 100%;
-    padding: 80px 80px 50px 80px;
+    padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 100px;
+    gap: 75px;
+
+    @media screen and (max-width: 1024px) {
+      padding: 40px 25px 40px 25px;
+      gap: 100px;
+    }
+    @media screen and (max-width: 900px) {
+
+    }
+    @media screen and (max-width: 768px) {
+
+    }
 
     &__text {
       display: flex;
@@ -39,6 +50,16 @@
         justify-content: space-between;
         height: 100%;
 
+        @media screen and (max-width: 1024px) {
+
+        }
+        @media screen and (max-width: 900px) {
+          width: 28%;
+        }
+        @media screen and (max-width: 768px) {
+
+        }
+
         &--title {
           display: flex;
           flex-direction: column;
@@ -48,6 +69,16 @@
             font-size: 48px;
             font-weight: 700;
             color: utils.$white-color;
+
+            @media screen and (max-width: 1024px) {
+              font-size: 42px;
+            }
+            @media screen and (max-width: 900px) {
+              font-size: 36px;
+            }
+            @media screen and (max-width: 768px) {
+              font-size: 18px;
+            }
           }
 
           h2 {
@@ -59,21 +90,48 @@
             white-space: nowrap;
             width: 0;
             animation: typing 2s steps(20, end) forwards;
-          }
-
-         
+            @media screen and (max-width: 1024px) {
+              font-size: 22px;
+            }
+            @media screen and (max-width: 900px) {
+              font-size: 20px;
+            }
+            @media screen and (max-width: 768px) {
+              font-size: 16px;
+            }
+          } 
         }
 
         &--text {
-          margin-top: 20px;
           opacity: 0;
           transform: translateY(20px);
           animation: fadeInUp 1s ease forwards;
           animation-delay: 2.0s;
+          text-align: justify;
+
+          @media screen and (max-width: 1024px) {
+
+          }
+          @media screen and (max-width: 900px) {
+            text-align: left;
+          }
+          @media screen and (max-width: 768px) {
+
+          }
           
           p {
             font-size: 18px;
             color: utils.$bluep-color;
+
+            @media screen and (max-width: 1024px) {
+              font-size: 16px;
+            }
+            @media screen and (max-width: 900px) {
+              
+            }
+            @media screen and (max-width: 768px) {
+              font-size: 14px;
+            }
           }
         }
       }
@@ -84,6 +142,18 @@
         flex-direction: column;
         justify-content: flex-end;
         gap: 40px;
+        text-align: justify;
+
+        @media screen and (max-width: 1024px) {
+
+        }
+        @media screen and (max-width: 900px) {
+            gap: 20px;
+            text-align: left;
+        }
+        @media screen and (max-width: 768px) {
+
+        }
 
         p {
           font-size: 18px;
@@ -92,6 +162,16 @@
           transform: translateY(20px);
           animation: fadeInUp 1s ease forwards;
           animation-delay: 3.0s;
+
+          @media screen and (max-width: 1024px) {
+            font-size: 16px;
+          }
+          @media screen and (max-width: 900px) {
+            
+          }
+          @media screen and (max-width: 768px) {
+            font-size: 14px;
+          }
 
           strong {
             font-weight: 700;
@@ -105,12 +185,21 @@
       align-items: center;
       gap: 30px;
 
+      @media screen and (max-width: 900px) {
+        justify-content: space-evenly ;
+        gap: 0;
+      }
+
       a {
         text-decoration: none;
         font-weight: bold;
         font-size: 18px;
         color: utils.$white-color;
         margin-right: 7%;
+
+        @media screen and (max-width: 1024px) {
+          font-size: 16px;
+        }
 
         &:hover {
           color: utils.$bluep-color;

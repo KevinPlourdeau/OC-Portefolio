@@ -1,15 +1,36 @@
 @use '@styles/Utils/utils' as utils;
 
 .skills {
-  padding: 50px 80px;
+  padding: 50px;
   text-align: center;
   overflow-x: auto;
+
+  @media screen and (max-width: 1024px) {
+    padding: 40px 25px 40px 25px;
+
+  }
+  @media screen and (max-width: 900px) {
+
+  }
+  @media screen and (max-width: 768px) {
+
+  }
 
   h2 {
     margin-bottom: 50px;
     font-size: 32px;
     font-weight: bold;
     color: utils.$bluep-color;
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: 900px) {
+
+    }
+    @media screen and (max-width: 768px) {
+
+    }
   }
 
   &__grid {
@@ -17,6 +38,16 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
     justify-content: center;
+
+    @media screen and (max-width: 1024px) {
+      gap: 30px;
+    }
+    @media screen and (max-width: 900px) {
+
+    }
+    @media screen and (max-width: 768px) {
+
+    }
   }
 
   &__card {

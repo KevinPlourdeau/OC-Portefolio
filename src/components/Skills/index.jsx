@@ -70,11 +70,11 @@ function Skills() {
         {sortedSkills.map((skill, index) => (
           <div key={index} className="skills__card">
             <div className="skills__card-top">
-              <img
-                src={`/src/assets/skills/${skill.logo}`}
-                alt={skill.name}
-                className="skills__card-logo"
-              />
+            <img
+              src={new URL(`/src/assets/skills/${skill.logo}`, import.meta.url).href}
+              alt={skill.name}
+              className="skills__card-logo"
+            />
               <p className="skills__card-name">{skill.name}</p>
             </div>
             <div

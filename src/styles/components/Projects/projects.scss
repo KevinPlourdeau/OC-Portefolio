@@ -1,18 +1,38 @@
 @use '@styles/Utils/utils' as utils;
 
 .projets {
-  padding: 50px 80px;
+  padding: 50px;
   background-color: utils.$bluep-color;
   text-align: center;
   box-shadow:
     0 -6px 10px rgba(0, 0, 0, 0.25),
     0 6px 10px rgba(0, 0, 0, 0.25);
 
+    @media screen and (max-width: 1024px) {
+      padding: 40px 25px 40px 25px;
+    }
+    @media screen and (max-width: 900px) {
+
+    }
+    @media screen and (max-width: 768px) {
+
+    }
+
   h2 {
     font-size: 32px;
     color: utils.$white-color;
     margin-bottom: 50px;
     font-weight: bold;
+
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 40px;
+    }
+    @media screen and (max-width: 900px) {
+
+    }
+    @media screen and (max-width: 768px) {
+
+    }
   }
 
   &__container {
@@ -20,6 +40,16 @@
     justify-content: center;
     align-items: stretch;
     gap: 50px;
+
+    @media screen and (max-width: 1024px) {
+      gap: 40px;
+    }
+    @media screen and (max-width: 900px) {
+
+    }
+    @media screen and (max-width: 768px) {
+
+    }
   }
 
   &__info {
@@ -36,6 +66,16 @@
       border-radius: 5px;
       text-align: center;
       box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.25);
+
+      @media screen and (max-width: 1024px) {
+        padding: 10px;
+      }
+      @media screen and (max-width: 900px) {
+  
+      }
+      @media screen and (max-width: 768px) {
+  
+      }
 
       h3 {
         font-size: 24px;
@@ -72,20 +112,37 @@
 
     &__description {
       padding: 30px;
-      font-size: 16px;
       border-radius: 5px;
       background-color: utils.$white-color;
       box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.25);
 
+      @media screen and (max-width: 1024px) {
+        padding: 20px;
+      }
+      @media screen and (max-width: 900px) {
+
+      }
+      @media screen and (max-width: 768px) {
+  
+      }
+
       p {
         margin-bottom: 20px;
+
+        @media screen and (max-width: 900px) {
+          font-size: 16px;
+        }
       }
 
       a {
-        font-size: 16px;
+        font-size: 18px;
         color: utils.$black-color;
         text-decoration: underline;
         font-weight: 700;
+
+        @media screen and (max-width: 900px) {
+          font-size: 16px;
+        }
 
         &:hover {
           color: utils.$bluep-color;

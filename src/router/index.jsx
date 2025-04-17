@@ -3,7 +3,7 @@ import Home from '@pages/Home'
 
 const AppRouter = () => {
   return (
-    <Router>
+    <Router basename="/OC-Portefolio">
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
