@@ -79,7 +79,7 @@ function Projets() {
         <div className="projets__right">
           <div className="projets__hint">
             <i className="fa-solid fa-magnifying-glass"></i>
-            <span>Cliquez sur les images du site pour l’agrandir</span>
+            <span>Cliquez sur les images du projet pour les agrandir</span>
           </div>
           <div className="projets__gallery">
             {images.length > 0 ? (

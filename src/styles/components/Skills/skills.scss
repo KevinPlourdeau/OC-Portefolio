@@ -6,14 +6,17 @@
   overflow-x: auto;
 
   @media screen and (max-width: 1024px) {
-    padding: 40px 25px 40px 25px;
+    padding: 40px 25px;
 
   }
   @media screen and (max-width: 900px) {
 
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 720px) {
 
+  }
+  @media screen and (max-width: 480px) {
+    padding: 40px 10px ;
   }
 
   h2 {
@@ -28,8 +31,11 @@
     @media screen and (max-width: 900px) {
 
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 720px) {
 
+    }
+    @media screen and (max-width: 480px) {
+      margin-bottom: 40px ;
     }
   }
 
@@ -45,8 +51,11 @@
     @media screen and (max-width: 900px) {
 
     }
-    @media screen and (max-width: 768px) {
-
+    @media screen and (max-width: 720px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (max-width: 480px) {
+      grid-template-columns: repeat(2, 1fr);
     }
   }
 

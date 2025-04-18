@@ -23,7 +23,7 @@ const Intro = () => {
           <a href="#competences">COMPÉTENCES</a>
           <a href="#projets">PROJETS</a>
           <a href="#contact">CONTACT</a>
-          <a href="#cv">MON CV</a>
+          <a href="/CV_Plourdeau_Kevin.pdf" download="CV_Plourdeau_Kevin.pdf" target="_blank" rel="noopener noreferrer">MON CV</a>
         </nav>
       </div>
     </section>

@@ -26,17 +26,6 @@
     justify-content: center;
     gap: 75px;
 
-    @media screen and (max-width: 1024px) {
-      padding: 40px 25px 40px 25px;
-      gap: 100px;
-    }
-    @media screen and (max-width: 900px) {
-
-    }
-    @media screen and (max-width: 768px) {
-
-    }
-
     &__text {
       display: flex;
       justify-content: space-between;
@@ -50,16 +39,6 @@
         justify-content: space-between;
         height: 100%;
 
-        @media screen and (max-width: 1024px) {
-
-        }
-        @media screen and (max-width: 900px) {
-          width: 28%;
-        }
-        @media screen and (max-width: 768px) {
-
-        }
-
         &--title {
           display: flex;
           flex-direction: column;
@@ -69,16 +48,6 @@
             font-size: 48px;
             font-weight: 700;
             color: utils.$white-color;
-
-            @media screen and (max-width: 1024px) {
-              font-size: 42px;
-            }
-            @media screen and (max-width: 900px) {
-              font-size: 36px;
-            }
-            @media screen and (max-width: 768px) {
-              font-size: 18px;
-            }
           }
 
           h2 {
@@ -90,53 +59,25 @@
             white-space: nowrap;
             width: 0;
             animation: typing 2s steps(20, end) forwards;
-            @media screen and (max-width: 1024px) {
-              font-size: 22px;
-            }
-            @media screen and (max-width: 900px) {
-              font-size: 20px;
-            }
-            @media screen and (max-width: 768px) {
-              font-size: 16px;
-            }
-          } 
+          }
         }
 
         &--text {
           opacity: 0;
           transform: translateY(20px);
           animation: fadeInUp 1s ease forwards;
-          animation-delay: 2.0s;
+          animation-delay: 2s;
           text-align: justify;
 
-          @media screen and (max-width: 1024px) {
-
-          }
-          @media screen and (max-width: 900px) {
-            text-align: left;
-          }
-          @media screen and (max-width: 768px) {
-
-          }
-          
           p {
             font-size: 18px;
             color: utils.$bluep-color;
-
-            @media screen and (max-width: 1024px) {
-              font-size: 16px;
-            }
-            @media screen and (max-width: 900px) {
-              
-            }
-            @media screen and (max-width: 768px) {
-              font-size: 14px;
-            }
           }
         }
       }
 
       &-right {
+        height: 100%;
         width: 35%;
         display: flex;
         flex-direction: column;
@@ -144,34 +85,13 @@
         gap: 40px;
         text-align: justify;
 
-        @media screen and (max-width: 1024px) {
-
-        }
-        @media screen and (max-width: 900px) {
-            gap: 20px;
-            text-align: left;
-        }
-        @media screen and (max-width: 768px) {
-
-        }
-
         p {
           font-size: 18px;
           color: utils.$bluep-color;
           opacity: 0;
           transform: translateY(20px);
           animation: fadeInUp 1s ease forwards;
-          animation-delay: 3.0s;
-
-          @media screen and (max-width: 1024px) {
-            font-size: 16px;
-          }
-          @media screen and (max-width: 900px) {
-            
-          }
-          @media screen and (max-width: 768px) {
-            font-size: 14px;
-          }
+          animation-delay: 3s;
 
           strong {
             font-weight: 700;
@@ -185,27 +105,123 @@
       align-items: center;
       gap: 30px;
 
-      @media screen and (max-width: 900px) {
-        justify-content: space-evenly ;
-        gap: 0;
-      }
-
       a {
         text-decoration: none;
         font-weight: bold;
         font-size: 18px;
         color: utils.$white-color;
-        margin-right: 7%;
-
-        @media screen and (max-width: 1024px) {
-          font-size: 16px;
-        }
 
         &:hover {
           color: utils.$bluep-color;
         }
       }
     }
+  }
+}
+
+@media (max-width: 1024px) {
+  .intro__overlay {
+    padding: 40px 25px;
+    gap: 100px;
+  }
+  .intro__overlay__text-left--title h1 {
+    font-size: 42px;
+  }
+  .intro__overlay__text-left--title h2 {
+    font-size: 22px;
+  }
+  .intro__overlay__text-left--text p,
+  .intro__overlay__text-right p,
+  .intro__overlay__nav a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .intro__overlay__text-left {
+    width: 28%;
+  }
+  .intro__overlay__text-left--text {
+    text-align: left;
+  }
+  .intro__overlay__text-right {
+    width: 40%;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 720px) {
+  .intro__overlay {
+    gap: 50px;
+  }
+  .intro__overlay__text-left {
+    width: 40%;
+  }
+  .intro__overlay__text-left--title h1 {
+    font-size: 24px;
+  }
+  .intro__overlay__text-left--title h2 {
+    font-size: 18px;
+  }
+  .intro__overlay__text-left--text p,
+  .intro__overlay__text-right p,
+  .intro__overlay__nav a {
+    font-size: 15px;
+  }
+  .intro__overlay__text-right {
+    width: 45%;
+    gap: 10px;
+    text-align: left;
+  }
+  .intro__overlay__nav a {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro__background {
+    opacity: 0.6;
+  }
+  .intro__overlay {
+    padding: 20px 10px;
+    gap: 50px;
+  }
+  .intro__overlay__text {
+    flex-direction: column;
+    align-items: center;
+  }
+  .intro__overlay__text-left {
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .intro__overlay__text-left--title {
+    align-items: center;
+    justify-content: center;
+  }
+  .intro__overlay__text-left--title h1 {
+    font-size: 36px;
+  }
+  .intro__overlay__text-left--title h2 {
+    font-size: 22px;
+  }
+  .intro__overlay__text-left--text {
+    text-align: justify;
+  }
+  .intro__overlay__text-left--text p {
+    font-size: 13px;
+  }
+  .intro__overlay__text-right {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+  }
+  .intro__overlay__text-right p {
+    font-size: 12px;
+  }
+  .intro__overlay__nav a {
+    font-size: 12px;
   }
 }
 

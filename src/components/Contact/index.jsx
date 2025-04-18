@@ -8,18 +8,17 @@ function Contact() {
       <div className="contact__container">
         <div className="contact__left">
         <div className="contact__box">
-            <h3>Mon Cv</h3>
+          <h3><i class="fa-regular fa-user"></i></h3>
             <p>
               <a href="/MonCV.pdf" download>
-                télécharger en cliquant ici
+                Télécharger mon CV
               </a>
             </p>
           </div>
           <div className="contact__box">
-            <h3>Information de contact</h3>
-            <p>kevin.plourdeau@gmail.com</p>
+            <h3><i class="fa-solid fa-envelope"></i></h3>
+            <p><a href="mailto:kevin.plourdeau@gmail.com">kevin.plourdeau@gmail.com</a></p>
           </div>
-          
         </div>
         <ContactForm />
       </div>

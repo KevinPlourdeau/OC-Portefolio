@@ -17,20 +17,23 @@ function ImageModal({ images, currentIndex, onClose, onNavigate }) {
 
   return (
     <div className="image-modal" onClick={onClose}>
+      <div class="image-modal__arrow-wrapper">
         <button className="image-modal__arrow--left" onClick={handlePrev}>❮</button>
-        
-        <div className="image-modal__content" onClick={(e) => e.stopPropagation()}>
-            <div className="image-modal__img-wrapper">
-                <img
-                src={new URL(`/src/assets/projects/${images[currentIndex]}`, import.meta.url).href}
-                alt={`Aperçu ${currentIndex + 1}`}
-                />
-            </div>
-            <p className="image-modal__counter">
-            {currentIndex + 1} / {images.length}
-            </p>
-        </div>
+      </div>
+      <div className="image-modal__content" onClick={(e) => e.stopPropagation()}>
+          <div className="image-modal__img-wrapper">
+              <img
+              src={new URL(`/src/assets/projects/${images[currentIndex]}`, import.meta.url).href}
+              alt={`Aperçu ${currentIndex + 1}`}
+              />
+          </div>
+          <p className="image-modal__counter">
+          {currentIndex + 1} / {images.length}
+          </p>
+      </div>
+      <div class="image-modal__arrow-wrapper">
         <button className="image-modal__arrow--right" onClick={handleNext}>❯</button>
+      </div>
     </div>
   );
 }
