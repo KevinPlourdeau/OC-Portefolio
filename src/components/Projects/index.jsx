@@ -16,18 +16,6 @@ function Projets() {
   const projet = projetsData[currentProject];
   const images = projet.pictures || [];
 
-  // Mots-clés mis en gras dans les descriptions selon le projet
-  const keywordsMap = {
-    "Booki": ["Booki", "HTML5", "CSS3", "Flexbox", "responsive", "GitHub", "Git"],
-    "Portfolio - Sophie Bluel": [
-      "JavaScript", "API", "REST", "modale", "upload", "suppression",
-      "connexion", "authentification", "DOM", "Figma"
-    ],
-    "Site - Nina Carducci": ["freelance", "audit", "Lighthouse", "GTMetrix", "modale", "SEO", "accessibilité", "performances", "référencement local", "Schema.org", "Open Graph", "Twitter Cards", "HTML", "CSS"],
-    "Kasa": ["React", "Vite", "Sass", "React Router", "Slideshow", "Collapse", "JSON", "404", "Figma", "composants", "responsive", "animations CSS"],
-    "Mon vieux Grimoire": ["Node.js", "Express", "MongoDB", "Mongoose", "API REST", "JWT", "Bcrypt", "Sharp", "CRUD", "notation", "Green Code", "compression d’images", "authentification"]
-  };
-
   // Navigation entre les projets
   const handlePrevProject = () => {
     setCurrentProject((prev) => (prev === 0 ? projetsData.length - 1 : prev - 1));
@@ -72,7 +60,6 @@ function Projets() {
           <div className="projets__info__description">
             <BoldTextJson
               text={projet.description}
-              keywords={keywordsMap[projet["under-title"]] || []}
             />
             {projet.github && (
               <a href={projet.github} target="_blank" rel="noopener noreferrer">
