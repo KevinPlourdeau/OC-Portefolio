@@ -6,6 +6,9 @@ import projetsData from '@datas/Projects/Projets.json';
 import ImageModal from "@components/Modale";
 import BoldTextJson from "@components/Boldtextjson";
 
+
+// Component: Projets
+// Description: Section affichant les projets avec galerie, navigation et modale d’images
 function Projets() {
   const [currentProject, setCurrentProject] = useState(0);
   const [modalImageIndex, setModalImageIndex] = useState(null);
@@ -13,6 +16,7 @@ function Projets() {
   const projet = projetsData[currentProject];
   const images = projet.pictures || [];
 
+  // Mots-clés mis en gras dans les descriptions selon le projet
   const keywordsMap = {
     "Booki": ["Booki", "HTML5", "CSS3", "Flexbox", "responsive", "GitHub", "Git"],
     "Portfolio - Sophie Bluel": [
@@ -24,6 +28,7 @@ function Projets() {
     "Mon vieux Grimoire": ["Node.js", "Express", "MongoDB", "Mongoose", "API REST", "JWT", "Bcrypt", "Sharp", "CRUD", "notation", "Green Code", "compression d’images", "authentification"]
   };
 
+  // Navigation entre les projets
   const handlePrevProject = () => {
     setCurrentProject((prev) => (prev === 0 ? projetsData.length - 1 : prev - 1));
     setModalImageIndex(null);
@@ -34,14 +39,13 @@ function Projets() {
     setModalImageIndex(null);
   };
 
+  // Gestion de la modale d’image
   const openModal = (index) => {
     setModalImageIndex(index);
   };
-
   const closeModal = () => {
     setModalImageIndex(null);
   };
-
   const navigateModal = (newIndex) => {
     setModalImageIndex(newIndex);
   };
@@ -50,16 +54,18 @@ function Projets() {
     <section className="projets" id="projets">
       <h2>Mes Projets</h2>
       <div className="projets__container">
+
+        {/* Partie gauche : titre, navigation, description */}
         <div className="projets__info">
           <div className="projets__info__titles">
             <h3>{projet.title}</h3>
             <h4>{projet["under-title"]}</h4>
           </div>
           <div className="projets__info--arrows">
-            <button onClick={handlePrevProject} className="arrow arrow-left">
+            <button onClick={handlePrevProject} className="arrow arrow-left" aria-label="Previous slide">
               <FontAwesomeIcon icon={faArrowLeft} />
             </button>
-            <button onClick={handleNextProject} className="arrow arrow-right">
+            <button onClick={handleNextProject} className="arrow arrow-right" aria-label="Next slide">
               <FontAwesomeIcon icon={faArrowRight} />
             </button>
           </div>
@@ -76,6 +82,7 @@ function Projets() {
           </div>
         </div>
 
+        {/* Partie droite : galerie d’images */}
         <div className="projets__right">
           <div className="projets__hint">
             <i className="fa-solid fa-magnifying-glass"></i>
@@ -102,6 +109,7 @@ function Projets() {
         </div>
       </div>
 
+      {/* Modale d’image */}
       <ImageModal
         images={images}
         currentIndex={modalImageIndex}

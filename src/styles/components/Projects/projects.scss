@@ -1,5 +1,6 @@
 @use '@styles/Utils/utils' as utils;
 
+
 .projets {
   padding: 50px;
   background-color: utils.$bluep-color;
@@ -8,56 +9,23 @@
     0 -6px 10px rgba(0, 0, 0, 0.25),
     0 6px 10px rgba(0, 0, 0, 0.25);
 
-    @media screen and (max-width: 1024px) {
-      padding: 40px 25px;
-    }
-    @media screen and (max-width: 900px) {
-
-    }
-    @media screen and (max-width: 720px) {
-
-    }
-    @media screen and (max-width: 480px) {
-      padding: 40px 10px;
-    }
-
+  //  Title 
   h2 {
     font-size: 32px;
     color: utils.$white-color;
     margin-bottom: 50px;
     font-weight: bold;
-
-    @media screen and (max-width: 1024px) {
-      margin-bottom: 40px;
-    }
-    @media screen and (max-width: 900px) {
-
-    }
-    @media screen and (max-width: 720px) {
-
-    }
   }
 
+  //  Main Container 
   &__container {
     display: flex;
     justify-content: center;
     align-items: stretch;
     gap: 50px;
-
-    @media screen and (max-width: 1024px) {
-      gap: 40px;
-    }
-    @media screen and (max-width: 900px) {
-
-    }
-    @media screen and (max-width: 720px) {
-
-    }
-    @media screen and (max-width: 480px) {
-      gap: 20px;
-    }
   }
 
+  //  Left Section 
   &__info {
     flex: 1;
     border-radius: 8px;
@@ -66,6 +34,7 @@
     flex-direction: column;
     gap: 20px;
 
+    //  Titles 
     &__titles {
       background-color: utils.$white-color;
       padding: 20px;
@@ -73,36 +42,19 @@
       text-align: center;
       box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.25);
 
-      @media screen and (max-width: 1024px) {
-        padding: 10px;
-      }
-      @media screen and (max-width: 900px) {
-  
-      }
-      @media screen and (max-width: 720px) {
-  
-      }
-
       h3 {
         font-size: 24px;
         font-weight: 700;
-
-        @media screen and (max-width: 480px) {
-          font-size: 18px;
-        }
       }
 
       h4 {
         font-size: 20px;
         margin-top: 5px;
         font-weight: 600;
-
-        @media screen and (max-width: 480px) {
-          font-size: 16px;
-        }
       }
     }
 
+    //  Arrows 
     &--arrows {
       display: flex;
       justify-content: space-around;
@@ -118,42 +70,21 @@
         justify-content: center;
         transition: transform 0.3s ease;
 
-        @media screen and (max-width: 480px) {
-          font-size: 24px;
-        }
-
         &:hover {
           transform: scale(1.2);
         }
       }
     }
 
+    //  Description 
     &__description {
       padding: 30px;
       border-radius: 5px;
       background-color: utils.$white-color;
       box-shadow: 0 0 12px 2px rgba(0, 0, 0, 0.25);
 
-      @media screen and (max-width: 1024px) {
-        padding: 20px;
-      }
-      @media screen and (max-width: 900px) {
-
-      }
-      @media screen and (max-width: 720px) {
-  
-      }
-      
-
       p {
         margin-bottom: 20px;
-
-        @media screen and (max-width: 900px) {
-          font-size: 16px;
-        }
-        @media screen and (max-width: 480px) {
-          font-size: 12px;
-        }
       }
 
       a {
@@ -162,13 +93,6 @@
         text-decoration: underline;
         font-weight: 700;
 
-        @media screen and (max-width: 900px) {
-          font-size: 16px;
-        }
-        @media screen and (max-width: 480px) {
-          font-size: 14px;
-        }
-
         &:hover {
           color: utils.$bluep-color;
         }
@@ -176,6 +100,7 @@
     }
   }
 
+  //  Right Section 
   &__right {
     flex: 1;
     display: flex;
@@ -191,6 +116,7 @@
     }
   }
 
+  //  Hint 
   &__hint {
     display: flex;
     align-items: center;
@@ -204,19 +130,12 @@
     border: 1px solid utils.$white-color;
     border-radius: 5px;
 
-    @media screen and (max-width: 480px) {
-      font-size: 12px;
-    }
-
     i {
       font-size: 16px;
-
-      @media screen and (max-width: 480px) {
-        font-size: 12px;
-      }
     }
   }
 
+  //  Gallery 
   &__gallery {
     display: flex;
     flex-direction: column;
@@ -260,7 +179,83 @@
     }
   }
 
+  //  Global strong override 
   strong {
     font-weight: bold;
+  }
+}
+
+//  MEDIA QUERIES 
+@media screen and (max-width: 1024px) {
+  .projets {
+    padding: 40px 25px;
+  }
+
+  .projets h2 {
+    margin-bottom: 40px;
+  }
+
+  .projets__container {
+    gap: 40px;
+  }
+
+  .projets__info__titles {
+    padding: 10px;
+  }
+
+  .projets__info__description {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .projets__info__description p {
+    font-size: 16px;
+  }
+
+  .projets__info__description a {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projets {
+    padding: 40px 10px;
+  }
+
+  .projets h2 {
+    margin-bottom: 40px;
+  }
+
+  .projets__container {
+    gap: 20px;
+  }
+
+  .projets__info__titles h3 {
+    font-size: 18px;
+  }
+
+  .projets__info__titles h4 {
+    font-size: 16px;
+  }
+
+  .projets__info--arrows .arrow {
+    font-size: 24px;
+  }
+
+  .projets__info__description p {
+    font-size: 12px;
+  }
+
+  .projets__info__description a {
+    font-size: 14px;
+  }
+
+  .projets__hint {
+    font-size: 12px;
+  }
+
+  .projets__hint i {
+    font-size: 12px;
   }
 }

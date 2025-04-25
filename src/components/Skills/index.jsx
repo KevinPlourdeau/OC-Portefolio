@@ -1,9 +1,14 @@
 import { useState, useEffect, useRef } from 'react';
 import skills from '@datas/Skills/Skill.json';
 
+
+// Component: Skills
+// Description: Affiche une grille de compétences triées par niveau avec animation au scroll
 function Skills() {
   const [visibleBars, setVisibleBars] = useState([]);
+  const barRefs = useRef([]);
 
+  // Ordre des niveaux pour le tri
   const levelOrder = {
     'débutant': 1,
     'base': 2,
@@ -11,8 +16,7 @@ function Skills() {
     'avancée': 4
   };
 
-  const barRefs = useRef([]);
-
+  // Largeur de la barre de progression selon le niveau
   const getProgressWidth = (level) => {
     switch (level.toLowerCase()) {
       case 'débutant':
@@ -28,12 +32,14 @@ function Skills() {
     }
   };
 
+  // Tri des compétences du niveau le plus élevé au plus bas
   const sortedSkills = [...skills].sort((a, b) => {
     const levelA = levelOrder[a.level.toLowerCase()] || 0;
     const levelB = levelOrder[b.level.toLowerCase()] || 0;
-    return levelA - levelB;
+    return levelB - levelA;
   });
 
+  // Observer pour animer les barres visibles à l'écran
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -66,6 +72,8 @@ function Skills() {
   return (
     <section className="skills">
       <h2>Compétences</h2>
+
+      {/* Grille de cartes de compétences */}
       <div className="skills__grid">
         {sortedSkills.map((skill, index) => (
           <div key={index} className="skills__card">
@@ -77,6 +85,8 @@ function Skills() {
             />
               <p className="skills__card-name">{skill.name}</p>
             </div>
+
+            {/* Barre de progression animée */}
             <div
               className="skills__card-progress"
               ref={(el) => (barRefs.current[index] = el)}
@@ -91,6 +101,8 @@ function Skills() {
                 }}
               ></div>
             </div>
+
+            {/* Label du niveau */}
             <p className="skills__card-level">{skill.level}</p>
           </div>
         ))}

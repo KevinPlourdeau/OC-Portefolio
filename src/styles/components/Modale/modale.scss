@@ -1,5 +1,6 @@
 @use '@styles/Utils/utils' as utils;
 
+
 .image-modal {
   position: fixed;
   inset: 0;
@@ -10,11 +11,13 @@
   gap: 20px;
   padding: 0 20px;
 
+  //  Arrows Wrapper 
   &__arrow-wrapper {
     display: flex;
-    align-items: center; // ← ici on centre verticalement par rapport à l'image
+    align-items: center;
   }
 
+  //  Arrows Left & Right 
   &__arrow--left,
   &__arrow--right {
     font-size: 64px;
@@ -29,6 +32,7 @@
     }
   }
 
+  //  Modal Content 
   &__content {
     background-color: transparent;
     border-radius: 5px;
@@ -39,6 +43,7 @@
     align-items: center;
   }
 
+  //  Image Wrapper 
   &__img-wrapper {
     display: flex;
     align-items: center;
@@ -52,6 +57,7 @@
     }
   }
 
+  //  Image Counter 
   &__counter {
     margin-top: 16px;
     font-size: 16px;
@@ -59,7 +65,8 @@
   }
 }
 
-  
+
+//  MEDIA QUERIES 
 @media (max-width: 720px) {
   .image-modal {
     gap: 12px;
@@ -111,6 +118,3 @@
     }
   }
 }
-  
-  
-  

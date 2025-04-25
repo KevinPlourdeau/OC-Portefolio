@@ -7,6 +7,7 @@
   overflow: hidden;
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
 
+  //  Background image 
   &__background {
     position: absolute;
     width: 100%;
@@ -16,6 +17,7 @@
     transform: scaleX(-1);
   }
 
+  //  Overlay main container 
   &__overlay {
     position: relative;
     width: 100%;
@@ -26,12 +28,14 @@
     justify-content: center;
     gap: 75px;
 
+    //  Text area: split left & right 
     &__text {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       flex: 1;
 
+      //  Left section 
       &-left {
         width: 25%;
         display: flex;
@@ -76,6 +80,7 @@
         }
       }
 
+      //  Right section 
       &-right {
         height: 100%;
         width: 35%;
@@ -100,6 +105,7 @@
       }
     }
 
+    //  Navigation links 
     &__nav {
       display: flex;
       align-items: center;
@@ -119,17 +125,21 @@
   }
 }
 
+//  MEDIA QUERIES
 @media (max-width: 1024px) {
   .intro__overlay {
     padding: 40px 25px;
     gap: 100px;
   }
+
   .intro__overlay__text-left--title h1 {
     font-size: 42px;
   }
+
   .intro__overlay__text-left--title h2 {
     font-size: 22px;
   }
+
   .intro__overlay__text-left--text p,
   .intro__overlay__text-right p,
   .intro__overlay__nav a {
@@ -141,9 +151,11 @@
   .intro__overlay__text-left {
     width: 28%;
   }
+
   .intro__overlay__text-left--text {
     text-align: left;
   }
+
   .intro__overlay__text-right {
     width: 40%;
     gap: 20px;
@@ -154,25 +166,31 @@
   .intro__overlay {
     gap: 50px;
   }
+
   .intro__overlay__text-left {
     width: 40%;
   }
+
   .intro__overlay__text-left--title h1 {
     font-size: 24px;
   }
+
   .intro__overlay__text-left--title h2 {
     font-size: 18px;
   }
+
   .intro__overlay__text-left--text p,
   .intro__overlay__text-right p,
   .intro__overlay__nav a {
-    font-size: 15px;
+    font-size: 14px;
   }
+
   .intro__overlay__text-right {
     width: 45%;
     gap: 10px;
     text-align: left;
   }
+
   .intro__overlay__nav a {
     font-size: 14px;
   }
@@ -180,51 +198,73 @@
 
 @media (max-width: 480px) {
   .intro__background {
-    opacity: 0.6;
+    opacity: 0.7;
   }
+
   .intro__overlay {
     padding: 20px 10px;
     gap: 50px;
   }
+
   .intro__overlay__text {
     flex-direction: column;
     align-items: center;
   }
+
   .intro__overlay__text-left {
     width: 100%;
     align-items: center;
     justify-content: space-around;
   }
+
   .intro__overlay__text-left--title {
     align-items: center;
     justify-content: center;
   }
+
   .intro__overlay__text-left--title h1 {
     font-size: 36px;
   }
+
   .intro__overlay__text-left--title h2 {
     font-size: 22px;
   }
+
   .intro__overlay__text-left--text {
     text-align: justify;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: 500;
   }
+
   .intro__overlay__text-left--text p {
     font-size: 13px;
+    color: utils.$black-color;
   }
+
   .intro__overlay__text-right {
     width: 100%;
     flex-direction: column;
     justify-content: center;
     text-align: justify;
+    font-weight: 500;
   }
+
   .intro__overlay__text-right p {
-    font-size: 12px;
+    font-size: 13px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 5px;
+    border-radius: 5px;
+    color: utils.$black-color;
   }
+
   .intro__overlay__nav a {
     font-size: 12px;
   }
 }
 
+//  ANIMATIONS 
 @keyframes typing {
   from {
     width: 0;
