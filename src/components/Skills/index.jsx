@@ -20,13 +20,13 @@ function Skills() {
   const getProgressWidth = (level) => {
     switch (level.toLowerCase()) {
       case 'débutant':
-        return '25%';
+        return '10%';
       case 'base':
-        return '40%';
+        return '20%';
       case 'intermédiaire':
-        return '60%';
+        return '45%';
       case 'avancée':
-        return '80%';
+        return '65%';
       default:
         return '0%';
     }
