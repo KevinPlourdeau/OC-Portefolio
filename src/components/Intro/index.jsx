@@ -39,8 +39,8 @@ const Intro = () => {
           <a href="#projets">PROJETS</a>
           <a href="#contact">CONTACT</a>
           <DownloadButton
-            filePath={`${import.meta.env.BASE_URL}CV_Plourdeau_Kevin.pdf`}
-            fileName="CV_Plourdeau_Kevin.pdf"
+            filePath={`${import.meta.env.BASE_URL}CV_Kevin_Plourdeau_noAL.pdf`}
+            fileName="CV_Kevin_Plourdeau_noAL.pdf"
           >
             MON CV
           </DownloadButton>
