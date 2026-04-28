@@ -6,7 +6,9 @@
   { "name": "Sass", "level": "Intermédiaire", "logo": "sass.png" },
   { "name": "Mongo", "level": "Base", "logo": "mongodb.png" },
   { "name": "node.js\n/\nExpress", "level": "Base", "logo": "node.png" },
-  { "name": "CSS", "level": "Avancée", "logo": "css.png" }
+  { "name": "CSS", "level": "Avancée", "logo": "css.png" },
+  { "name": "Python", "level": "base", "logo": "python.png" },
+  { "name": "Django", "level": "base", "logo": "django.png" }
 ]
 
   
