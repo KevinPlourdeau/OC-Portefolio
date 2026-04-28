@@ -33,5 +33,12 @@
 		"pictures": ["VieuxGrimoire1.png", "VieuxGrimoire2.png", "VieuxGrimoire3.png", "VieuxGrimoire4.png", "VieuxGrimoire5.png", "VieuxGrimoire6.png"],
 		"description":  "Ce {projet} {back-end} réalisé pour le site {Mon} {Vieux} {Grimoire} m’a permis de développer une {API} {REST} {complète} à l’aide de {Node.js}, {Express} et {MongoDB}. L’{application} permet aux {utilisateurs} de {s’inscrire}, {se} {connecter}, {ajouter} un {livre}, le {modifier}, et surtout, de {noter} les {ouvrages} à l’aide d’un {système} de {notation} {sécurisé}. L’{authentification} est gérée avec des {tokens} {JWT}, les {mots} de {passe} sont {cryptés} avec {Bcrypt}, et les {images} {uploadées} sont {compressées} grâce à {Sharp}. Une {attention} {particulière} a été portée au respect des {bonnes} {pratiques} du {Green} {Code}, notamment en {optimisant} le {poids} des {images}. L’{API} respecte scrupuleusement les {spécifications} {techniques} fournies par le {front-end}, et les {notations} {multiples} par un même {utilisateur} sont {bloquées}, tout en {recalculant} {dynamiquement} la {moyenne} des {notes} de chaque {livre}.",
 		"github": "https://github.com/KevinPlourdeau/Projet6.git"
+	},
+	{
+  		"title": "Projet 6:",
+  		"under-title": "TaskFlow",
+  		"pictures": ["TaskFlow1.png", "TaskFlow2.png", "TaskFlow3.png"],
+  		"description": "Ce {projet} personnel m’a permis de développer une {application} web complète de {gestion} de {tâches} avec {Python} et {Django}. L’objectif était de concevoir un véritable {CRUD} permettant de {créer}, {modifier}, {supprimer} et {suivre} des {tâches} du quotidien avec une interface propre et professionnelle. J’ai mis en place un {dashboard} affichant les {statistiques} des tâches ({total}, {à faire}, {en cours}, {terminées}), un {système} de {statuts} colorés, ainsi que l’ajout de {dates} {limites} pour améliorer le suivi. Le projet utilise les {Models}, {Views}, {Templates} et {Forms} de {Django}, avec la gestion de la base de données via {SQLite}. J’ai également ajouté une {dockerisation} complète avec {Docker} pour reproduire facilement l’environnement de développement.",
+  		"github": "https://github.com/KevinPlourdeau/taskflow_django"
 	}
 ]
