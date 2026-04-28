@@ -16,8 +16,8 @@ function Contact() {
           <h3><i className="fa-regular fa-user"></i></h3>
             <p>
               <DownloadButton
-                filePath={`${import.meta.env.BASE_URL}CV_Plourdeau_Kevin.pdf`}
-                fileName="CV_Plourdeau_Kevin.pdf"
+                filePath={`${import.meta.env.BASE_URL}CV_Plourdeau_Kevin_noAL.pdf`}
+                fileName="CV_Plourdeau_Kevin_noAL.pdf"
               >
                 Télécharger mon CV
               </DownloadButton>
